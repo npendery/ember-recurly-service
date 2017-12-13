@@ -1,6 +1,30 @@
+# REPO STILL WIP
+
 # ember-recurly-service
 
-This README outlines the details of collaborating on this Ember addon.
+This is a service to integrate [Recurly.js](https://dev.recurly.com/docs/recurlyjs) into your Ember application.
+
+## Configuration
+
+Add your Recurly Public Key to your app's `config/environment.js` file as such:
+
+```
+ENV.recurly = {
+  publicKey: 'yourPubKeyGoesHere'
+}
+```
+
+Then inject this service into any file that needs to communicate with Recurly to use it.
+
+```
+import { inject as service } from '@ember/service';
+
+export {
+  recurly: service()
+}
+```
+
+# Development
 
 ## Installation
 
