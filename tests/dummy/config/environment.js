@@ -24,6 +24,10 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.recurly = {
+    publicKey: process.env.RECURLY_API_KEY || 'fakeTestKey'
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
